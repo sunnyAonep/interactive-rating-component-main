@@ -1,0 +1,268 @@
+:root {
+    --header-color: hsl(0, 0%, 100%);
+    --text-color: hsl(217, 12%, 63%);
+    --number-text-color: hsl(216, 12%, 54%);
+    --number-background-color: hsl(213, 19%, 18%);
+    --body-background-color: hsl(216, 12%, 8%);
+    --card-background-color: #181e27;
+    --submit-text-color: var(--header-color);
+    --submit-background-color: hsl(25, 97%, 53%);
+    --number-text-active-color: var(--header-color);
+    --number-text-hover-color: var(--header-color);
+    --number-background-active-color: var(--number-text-color);
+    --number-background-hover-color: var(--submit-background-color);
+    --submit-text-hover-color: var(--submit-background-color);
+    --submit-background-hover-color: var(--header-color);
+    --submit-background-border-hover-color: #0000;
+}
+
+* {
+    margin: 0;
+    font-family: 'Overpass';
+    transition: 0.18s;
+}
+
+html, body {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background-color);
+}
+
+.toggle-theme {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    font-size: 18px;
+    background-color: var(--card-background-color);
+    color: var(--header-color);
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+}
+
+.rating-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--card-background-color);
+    border-radius: 25px;
+}
+
+.rating-card-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.star-button {
+    background-color: var(--number-background-color);
+    border-radius: 100%;
+    border: none;
+
+    /* Vertically center the img child element */
+    display: flex;
+}
+.star-button img {
+    margin: auto;
+}
+
+.header {
+    color: var(--header-color);
+    font-weight: 700;
+}
+
+.text {
+    color: var(--text-color);
+}
+
+.rating-component {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.rating-component button {
+    background-color: var(--number-background-color);
+    color: var(--number-text-color);
+    border: none;
+    border-radius: 100%;
+}
+
+.rating-component button:hover {
+    background-color: var(--number-background-hover-color);
+    color: var(--number-text-hover-color);
+}
+
+.rating-component .button-active {
+    background-color: var(--number-background-active-color) !important;
+    color: var(--number-text-active-color) !important;
+    background-color: var(--card-background-color) !important;
+    color: var(--submit-background-color) !important;
+    border: 2px solid var(--submit-background-color) !important;
+}
+
+.submit {
+    background-color: var(--submit-background-color);
+    color: var(--submit-text-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 22.5px;
+}
+
+.submit:hover, .submit:active {
+    background-color: var(--submit-background-hover-color);
+    color: var(--submit-text-hover-color);
+    border: 2px solid var(--submit-background-border-hover-color);
+}
+
+.light-theme {
+    --header-color: hsl(212, 21%, 14%);
+    --text-color: hsl(228, 12%, 48%);
+    --number-text-color: hsl(228, 12%, 48%);
+    --number-background-color: hsl(30, 38%, 92%);
+    --body-background-color: hsl(30, 38%, 92%);
+    --card-background-color: hsl(0, 0%, 100%);
+    --submit-text-color: white;
+    --submit-background-color: hsl(25, 97%, 53%);
+    --submit-background-border-hover-color: var(--submit-background-color);
+}
+.rating-card-thanks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.selected {
+    background-color: var(--number-background-color);
+    color: var(--submit-background-color);
+    border-radius: 22.5px;
+}
+
+@media (min-width: 600px) {
+    .rating-card {
+        width: 412px;
+        height: 416px;
+    }
+
+    .rating-card-main, .rating-card-thanks {
+        margin: 32px 39px 32px 32px;
+    }
+
+    .star-button {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 30px;
+    }
+
+    .header {
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 7px;
+    }
+
+    .text {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    .rating-component {
+        margin-bottom: 32px;
+    }
+
+    .rating-component button {
+        width: 51px;
+        height: 51px;
+        font-size: 16px;
+    }
+
+    .submit {
+        width: 100%;
+        height: 45px;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .rating-card-thanks img {
+        width: 162px;
+        height: 108px;
+        margin-bottom: 32px;
+    }
+
+    .selected {
+        font-size: 15px;
+        line-height: 24px;
+        padding: 4px 20px;
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width: 599px) {
+    .rating-card {
+        width: 327px;
+        height: 340px;
+    }
+
+    .rating-card-main, .rating-card-thanks {
+        margin: 24px;
+    }
+
+    .star-button {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+
+    .header {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+
+    .rating-component {
+        margin-bottom: 24px;
+    }
+
+    .rating-component button {
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .submit {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .rating-card-thanks img {
+        width: 144px;
+        height: 96px;
+        margin-bottom: 24px;
+    }
+
+    .selected {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 5px 12px;
+        margin-bottom: 24px;
+    }
+}
