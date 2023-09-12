@@ -31,19 +31,6 @@ html, body {
     background-color: var(--body-background-color);
 }
 
-.toggle-theme {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-
-    font-size: 18px;
-    background-color: var(--card-background-color);
-    color: var(--header-color);
-    border: none;
-    border-radius: 20px;
-    height: 40px;
-    padding: 10px;
-}
 
 .rating-card {
     display: flex;
@@ -67,8 +54,6 @@ html, body {
     background-color: var(--number-background-color);
     border-radius: 100%;
     border: none;
-
-    /* Vertically center the img child element */
     display: flex;
 }
 .star-button img {
@@ -124,17 +109,6 @@ html, body {
     border: 2px solid var(--submit-background-border-hover-color);
 }
 
-.light-theme {
-    --header-color: hsl(212, 21%, 14%);
-    --text-color: hsl(228, 12%, 48%);
-    --number-text-color: hsl(228, 12%, 48%);
-    --number-background-color: hsl(30, 38%, 92%);
-    --body-background-color: hsl(30, 38%, 92%);
-    --card-background-color: hsl(0, 0%, 100%);
-    --submit-text-color: white;
-    --submit-background-color: hsl(25, 97%, 53%);
-    --submit-background-border-hover-color: var(--submit-background-color);
-}
 .rating-card-thanks {
     display: none;
     flex-direction: column;

@@ -6,14 +6,6 @@ function rating (number) {
     let newRating = document.getElementsByClassName(`rating-${number}`)[0];
     newRating.className = newRating.className + " button-active";
 }
-function toggleTheme () {
-    current = document.getElementsByTagName("body")
-    if (current[0].className == "light-theme") {
-        current[0].className = "";
-    } else {
-        current[0].className = "light-theme";
-    }
-}
 function submit () {
     let rating = document.getElementsByClassName('button-active')[0].textContent;
     document.getElementsByClassName('selected')[0].innerHTML = `You selected ${rating} out of 5`;
